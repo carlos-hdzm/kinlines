@@ -1,7 +1,7 @@
 {
   "name": "kinlines",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:browser": "vitest run --project browser"
+    "test:browser": "vitest run --project browser",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
