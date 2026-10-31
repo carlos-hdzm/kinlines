@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+permissions:
+  contents: write
+on:
+  push:
+    branches: [ "main" ]
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  cicd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Set up Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '24'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests with coverage
+        env:
+          NODE_ENV: ci
+        run: npm run test:coverage
+      - name: Generating coverage badge
+        uses: jpb06/coverage-badges-action@latest
+        with:
+          badges-icon: vitest
+      - name: Build
+        if: github.ref_type == 'tag'
+        env:
+          NODE_ENV: production
+        run: npm run build
+      - name: Deploy
+        if: github.ref_type == 'tag'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist

@@ -1,0 +1,152 @@
+{
+  "name": "Alice and Vivian sample tree",
+  "people": [
+    {
+      "id": "X",
+      "name": "Xavier X.",
+      "parents": null,
+      "birthYear": "1902",
+      "sex": "M"
+    },
+    {
+      "id": "Y",
+      "name": "Yvonne Y.",
+      "parents": null,
+      "birthYear": "1906",
+      "sex": "F"
+    },
+    {
+      "id": "N",
+      "name": "Nora N.",
+      "parents": null,
+      "birthYear": "1930",
+      "sex": "F"
+    },
+    {
+      "id": "W",
+      "name": "Willa W.",
+      "parents": null,
+      "birthYear": "1931",
+      "sex": "F"
+    },
+    {
+      "id": "T",
+      "name": "Teresa T.",
+      "parents": null,
+      "birthYear": "1958",
+      "sex": "F"
+    },
+    {
+      "id": "R",
+      "name": "Rafael R.",
+      "parents": null,
+      "birthYear": "1948",
+      "sex": "M"
+    },
+    {
+      "id": "H",
+      "name": "Harper H.",
+      "parents": null,
+      "birthYear": "1996"
+    },
+    {
+      "id": "Z",
+      "name": "Zachary Z.",
+      "parents": [
+        "X",
+        "Y"
+      ],
+      "birthYear": "1927",
+      "sex": "M"
+    },
+    {
+      "id": "M",
+      "name": "Martin M.",
+      "parents": [
+        "X",
+        "Y"
+      ],
+      "birthYear": "1929",
+      "sex": "M"
+    },
+    {
+      "id": "B",
+      "name": "Benjamin B.",
+      "parents": [
+        "M",
+        "N"
+      ],
+      "birthYear": "1954",
+      "sex": "M"
+    },
+    {
+      "id": "U",
+      "name": "Uma U.",
+      "parents": [
+        "Z",
+        "W"
+      ],
+      "birthYear": "1955",
+      "sex": "F"
+    },
+    {
+      "id": "V",
+      "name": "Vivian V.",
+      "parents": [
+        "Z",
+        "W"
+      ],
+      "birthYear": "1950",
+      "sex": "F"
+    },
+    {
+      "id": "C",
+      "name": "Claire C.",
+      "parents": [
+        "U",
+        "T"
+      ],
+      "birthYear": "1977",
+      "sex": "F"
+    },
+    {
+      "id": "D",
+      "name": "Daniel D.",
+      "parents": [
+        "V",
+        "R"
+      ],
+      "birthYear": "1973",
+      "sex": "M"
+    },
+    {
+      "id": "E",
+      "name": "Elena E.",
+      "parents": [
+        "V",
+        "R"
+      ],
+      "birthYear": "1976",
+      "sex": "F"
+    },
+    {
+      "id": "A",
+      "name": "Alice A.",
+      "parents": [
+        "B",
+        "C"
+      ],
+      "birthYear": "1998",
+      "sex": "F"
+    },
+    {
+      "id": "J",
+      "name": "Jordan J.",
+      "parents": [
+        "A",
+        "H"
+      ],
+      "birthYear": "2022"
+    }
+  ]
+}

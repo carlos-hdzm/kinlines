@@ -1,0 +1,97 @@
+.tree-canvas {
+  min-width: 0;
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  box-shadow: var(--shadow-panel);
+}
+.tree-canvas__toolbar {
+  min-height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+.tree-canvas__toolbar > div:first-child {
+  display: grid;
+  gap: 0.2rem;
+}
+.tree-canvas__zoom {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-rule);
+}
+.tree-canvas__zoom button {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+}
+.tree-canvas__zoom button:hover {
+  background: var(--color-soft);
+}
+.tree-canvas__zoom span {
+  min-width: 3.4rem;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+.tree-canvas__viewport {
+  min-height: 30rem;
+  max-height: 60vh;
+  overflow: auto;
+  background-image: radial-gradient(var(--color-rule) 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+}
+.tree-canvas__viewport svg {
+  display: block;
+  transition:
+    width 160ms ease,
+    height 160ms ease;
+}
+.tree-canvas__generations rect {
+  fill: color-mix(in srgb, var(--color-soft) 34%, transparent);
+}
+.tree-canvas__generations g:nth-child(even) rect {
+  fill: color-mix(in srgb, var(--color-paper-raised) 34%, transparent);
+}
+.tree-canvas__generations text {
+  fill: var(--color-muted);
+  font-family: var(--font-interface);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.tree-canvas__edges path {
+  fill: none;
+  stroke: var(--color-rule);
+  stroke-width: 1.5;
+}
+.tree-canvas__edges path.is-selected {
+  stroke: var(--color-secondary);
+  stroke-width: 2.5;
+}
+.tree-person rect {
+  fill: var(--color-paper-raised);
+  stroke: var(--color-rule);
+}
+.tree-person text {
+  fill: var(--color-ink);
+  font-family: var(--font-interface);
+  font-size: 0.72rem;
+}
+.tree-person .tree-person__meta {
+  fill: var(--color-muted);
+  font-size: 0.62rem;
+}
+.tree-person.is-selected rect {
+  stroke: var(--color-primary);
+  stroke-width: 2.5;
+}
+.tree-person.is-selected text:first-of-type {
+  fill: var(--color-primary);
+  font-weight: 500;
+}
