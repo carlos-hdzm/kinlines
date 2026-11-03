@@ -47,7 +47,3 @@ The visual system is intentionally centralized in `src/App.css`. Adjust the cust
 ```
 
 Dark-mode values are grouped together under `@media (prefers-color-scheme: dark)`.
-
-## Mathematics
-
-See [PEDIGREE_RELATIONSHIP_CHEATSHEET.md](./PEDIGREE_RELATIONSHIP_CHEATSHEET.md) for the definitions and matrix recurrence used by the analysis engine.
